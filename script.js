@@ -1,16 +1,17 @@
 // Connecting to socket.io
-            var socket = io.connect('http://localhost:8080');
+const socket = io.connect('http://localhost:8080');
 
-            // The username is requested, sent to the server and displayed in the title
-            var username = prompt('What\'s your username?');
+// The username is requested, sent to the server and displayed in the title
+const username = prompt('What\'s your username?');
 
-            if(username === '')
-            {
-                alert('Username Empty, Try Again...');
-                location.reload();
-            }
-            else
-            {
+if(username === '')// Checks if username is empty
+{
+    alert('Username Empty, Try Again...');
+    location.reload(); // Reload current page
+}
+// If username is not empty
+else
+{
                 socket.emit('new_client', username);
                 document.title = username + ' - ' + document.title;
 
@@ -52,3 +53,4 @@
                 socket.on('transformedLanguage', function(transformedLanguage){
                     $('#message').val(transformedLanguage); // Replace current message value with the transformed language
                 });
+            }
