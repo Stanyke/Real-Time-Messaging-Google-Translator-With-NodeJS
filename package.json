@@ -1,5 +1,5 @@
 {
-  "name": "real-time-messaging-google-translator-with-nodeJS",
+  "name": "real-time-messaging-google-translator-with-nodejs",
   "version": "1.0.0",
   "description": "This is a real time messaging app which helps translate words to any language of your choice before sending to other users.",
   "main": "index.js",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Stanyke/Real-Time-Messaging-Google-Translator-With-NodeJS#readme",
   "dependencies": {
+    "@k3rn31p4nic/google-translate-api": "github:k3rn31p4nic/google-translate-api",
     "ent": "^2.2.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
