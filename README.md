@@ -2,7 +2,7 @@
 
 This is a real time messaging app which helps translate words to any language of your choice before sending to other users.
 
-The code has been commented in details to enable you to understand how this app works and it's easy.
+This project has been commented in details to enable you to understand how this app works and it's easy,k in the basic files like **index.js** and **index.html**
 
 - Clone this repository.
 
