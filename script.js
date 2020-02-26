@@ -12,12 +12,12 @@ if(username === '')// Checks if username is empty
 // If username is not empty
 else
 {
-                socket.emit('new_client', username);
-                document.title = username + ' - ' + document.title;
+    socket.emit('new_client', username); // Passes username as new_client
+    document.title = username + ' - ' + document.title; // Updates webpage's title adding username to it
 
-                // When a message is received it's inserted in the page
-                socket.on('message', function(data) {
-                    insertMessage(data.username, data.message)
+    // When a message is received it's inserted in the page
+    socket.on('message', function(data) {
+        insertMessage(data.username, data.message)
                 })
 
                 // When a new client connects, the information is displayed
