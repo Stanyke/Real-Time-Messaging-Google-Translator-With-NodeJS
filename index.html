@@ -159,13 +159,13 @@
                     $('#chat_zone').prepend('<p><em>' + username + ' has joined the chat!</em></p>');
                 })
 
-                // When translator is required
+                // When translator is clicked
                 translateLanguage = () =>
                 {
-                    var messageValue = $('#message').val();
-                    var languageWanted = $('#language').val();
-                    socket.emit('language', languageWanted);
-                    socket.emit('messageToBeTranformed', messageValue); // Sends the message to the others
+                    var messageValue = $('#message').val(); // Gets message value
+                    var languageWanted = $('#language').val(); // Gets language code's value
+                    socket.emit('language', languageWanted); // Sends language code
+                    socket.emit('messageToBeTranformed', messageValue); // Sends the message
                 }
 
 
@@ -183,8 +183,9 @@
                     $('#chat_zone').prepend('<p><strong>' + username + '</strong> ' + message + '</p>');
                 }
 
+                // Gets The Transformed language gotten from the index.js file
                 socket.on('transformedLanguage', function(transformedLanguage){
-                    $('#message').val(transformedLanguage);
+                    $('#message').val(transformedLanguage); // Replace current message value with the transformed language
                 });
             }
         </script>
