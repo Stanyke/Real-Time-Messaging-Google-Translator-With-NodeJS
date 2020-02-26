@@ -40,19 +40,6 @@ io.sockets.on('connection', function (socket, username)
                 });
         });
     });
-
-
-    //Translator Setup
-    /* 
-    translate('Ik spreek Engels', {to: 'en'}).then(res => {
-        console.log(res.text);
-        //=> I speak English
-        console.log(res.from.language.iso);
-        //=> nl
-    }).catch(err => {
-        console.error(err);
-    });
-    */
   
 
     // When a message is received, the client’s username is retrieved and sent to the other people
